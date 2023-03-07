@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Progress navigation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="steps-container">
+        <div class="step">
+          <input type="checkbox" name="steps" id="step1" disabled checked />
+          <label for="step1" class="label1">Choose title</label>
+        </div>
+        <div class="step">
+          <input type="checkbox" name="steps" id="step2" />
+          <label for="step2" class="label2">Choose description</label>
+        </div>
+        <div class="step">
+          <input type="checkbox" name="steps" id="step3" disabled />
+          <label for="step3" class="label3">Confirm data</label>
+        </div>
+      </div>
+      <div class="content-container">
+        <p id="content">Choose title content</p>
+        <div class="buttons">
+          <input type="submit" value="Back" id="btn-back" />
+          <input type="submit" value="Submit title" id="btn-submit" />
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

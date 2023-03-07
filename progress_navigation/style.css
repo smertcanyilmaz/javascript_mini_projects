@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #823ba4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+}
+
+.container {
+  background: #fff;
+  padding: 25px;
+  border-radius: 7px;
+  border: 2px solid #dedede;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  width: 750px;
+  min-height: 160px;
+}
+
+.steps-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 37%;
+  margin-left: 44px;
+  margin-right: 20px;
+}
+
+.step {
+  margin: 10px 0;
+}
+
+label {
+  color: #838383;
+  cursor: pointer;
+  position: relative;
+  transition: 0.1s;
+}
+
+label:hover {
+  color: #000;
+}
+
+label::before {
+  position: absolute;
+  top: -2px;
+  left: -40px;
+  width: 28px;
+  height: 28px;
+  color: #757575;
+  font-weight: bold;
+  background: #f7f7f7;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 29px;
+  font-size: 17px;
+}
+
+.label1::before {
+  content: "1";
+}
+
+.label2::before {
+  content: "2";
+}
+
+.label3::before {
+  content: "3";
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"]:checked ~ label {
+  color: #000;
+}
+
+input[type="checkbox"]:checked ~ label::before {
+  color: #fff;
+  background: #2574af;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+input[type="submit"] {
+  font-size: 20px;
+  background: #efefef;
+  border: 0;
+  border-radius: 4px;
+  outline: 0;
+  padding: 0.7em 0.85em;
+  cursor: pointer;
+  transition: 0.1s;
+  position: relative;
+}
+
+input[type="submit"]:hover {
+  background: #e5e5e5;
+}
+
+input[type="submit"]:active {
+  top: 2px;
+}
+
+#btn-back {
+  display: none;
+  margin-bottom: 5px;
+}
