@@ -1,1 +1,1 @@
-You can view the project here [Click Me](smydarkmode.netlify.app/)
+You can view the project here [Click Me](https://smydarkmode.netlify.app/)
