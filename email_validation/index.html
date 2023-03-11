@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Email Validation</title>
+  </head>
+  <body>
+    <div class="container">
+      <label for="email-id">Email ID</label>
+      <div id="textbox">
+        <input type="email" name="" id="text" oninput="checker()" />
+        <i id="icon" class="fa-solid fa-circle-check"></i>
+        <i id="icon2" class="fas fa-exclamation-circle"></i>
+        <p id="p">Please Enter A Valid Email Id</p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
