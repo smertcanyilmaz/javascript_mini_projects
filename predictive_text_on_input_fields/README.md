@@ -1,4 +1,4 @@
-You can view the project here [Click Me](https://smypredictiveinput.netlify.app)
+You can view the project here [Click Me](https://smypredictiveinput.netlify.app).
 
 Test Words = [
 'Apple',
