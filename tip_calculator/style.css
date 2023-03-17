@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #79c2d0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 1000px;
+  height: 600px;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+}
+
+.common {
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.numberbox {
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  background-color: #e7eaeb;
+  margin-top: 10px;
+  padding-left: 10px;
+}
+
+.btn {
+  width: 95%;
+  height: inherit;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  display: inline-block;
+  text-align: right;
+  font-size: 22px;
+  color: #53a8b6;
+  font-weight: bold;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  width: 35px;
+  height: 35px;
+  background-color: transparent;
+  margin-right: 2px;
+}
+
+#span {
+  float: right;
+}
+i {
+  color: #53a8b6;
+}
+
+.number {
+  height: 400px;
+  width: 100%;
+  display: grid;
+}
+
+.btn-tip {
+  width: calc(100% / 3);
+  height: 40px;
+  background-color: green;
+  border-radius: 10px;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tip Calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="calc common">
+        <div class="result">
+          <span>Bill</span>
+          <div class="numberbox">
+            <span><i class="fa-sharp fa-solid fa-dollar-sign"></i></span>
+            <input type="number" class="btn" name="" id="" min="0" />
+          </div>
+        </div>
+        <div class="number">
+          <span class="span2">Select Tip %</span>
+          <input class="btn-tip" type="button" value="5%" />
+          <input class="btn-tip" type="button" value="10%" />
+          <input class="btn-tip" type="button" value="15%" />
+          <input class="btn-tip" type="button" value="25%" />
+          <input class="btn-tip" type="button" value="50%" />
+          <input
+            class="btn-tip"
+            type="number"
+            name=""
+            id=""
+            placeholder="CUSTOM"
+          />
+        </div>
+        <div class="result">
+          <span>Number of People</span>
+          <span id="span">Can't be Zero</span>
+          <div class="numberbox">
+            <span><i class="fa-solid fa-user"></i></span>
+            <input type="number" class="btn" name="" id="" min="0" />
+          </div>
+        </div>
+      </div>
+      <div class="board common">
+        <div class="prices">
+          <span>Tip Amount / person</span>
+          <div class="price"></div>
+        </div>
+        <div class="prices">
+          <span>Total/ person</span>
+          <div class="price"></div>
+        </div>
+        <input type="button" value="RESET" />
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
