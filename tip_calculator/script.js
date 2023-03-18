@@ -78,28 +78,7 @@ function customFunc() {
   tip_amount.innerHTML = `$${tipResult.toFixed(2)}`;
   let result = totalValue + tipResult;
   total.innerHTML = `$${result.toFixed(2)}`;
-  //   if (isNaN(customValue) || customValue == 0) {
-  //     total.innerHTML = ``;
-  //   } else if (
-  //     !isNaN(value) &&
-  //     customValue > 100 &&
-  //     !isNaN(parseFloat(number_people.value))
-  //   ) {
-  //     total.innerHTML = `100% is the limit`;
-  //   } else if (isNaN(value) && !isNaN(customValue)) {
-  //     total.innerHTML = `$0.00`;
-  //   } else if (
-  //     !isNaN(value) ||
-  //     !isNaN(customValue) ||
-  //     isNaN(parseFloat(number_people.value)) ||
-  //     parseFloat(number_people.value) == 0
-  //   ) {
-  //     span.style.visibility = 'visible';
-  //     total.innerHTML = ``;
-  //     tip_amount.innerHTML = ``;
-  //   } else {
-  //     return (total.innerHTML = `$${result}`);
-  //   }
+  
 }
 
 reset_btn.addEventListener('click', function () {
