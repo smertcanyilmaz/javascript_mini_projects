@@ -1,1 +1,1 @@
-You can view the project here [Click Me](smytipcalc.netlify.app/)
+You can view the project here [Click Me](https://smytipcalc.netlify.app/)
