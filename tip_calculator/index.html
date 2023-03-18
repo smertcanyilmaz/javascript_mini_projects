@@ -16,48 +16,73 @@
   </head>
   <body>
     <div class="container">
-      <div class="calc common">
+      <div class="common">
         <div class="result">
           <span>Bill</span>
           <div class="numberbox">
             <span><i class="fa-sharp fa-solid fa-dollar-sign"></i></span>
-            <input type="number" class="btn" name="" id="" min="0" />
+            <input
+              type="number"
+              class="info-box"
+              name=""
+              id="bill"
+              min="0"
+              placeholder="0,00"
+            />
           </div>
         </div>
         <div class="number">
           <span class="span2">Select Tip %</span>
-          <input class="btn-tip" type="button" value="5%" />
-          <input class="btn-tip" type="button" value="10%" />
-          <input class="btn-tip" type="button" value="15%" />
-          <input class="btn-tip" type="button" value="25%" />
-          <input class="btn-tip" type="button" value="50%" />
-          <input
-            class="btn-tip"
-            type="number"
-            name=""
-            id=""
-            placeholder="CUSTOM"
-          />
+          <div class="inner-number">
+            <input id="button-5" class="btn-tip" type="button" value="5%" />
+            <input id="button-10" class="btn-tip" type="button" value="10%" />
+            <input id="button-20" class="btn-tip" type="button" value="20%" />
+            <input id="button-25" class="btn-tip" type="button" value="25%" />
+            <input id="button-50" class="btn-tip" type="button" value="50%" />
+            <input
+              class="btn-tip"
+              type="number"
+              name=""
+              id="custom"
+              placeholder="Custom"
+              min="5"
+              max="100"
+              oninput="customFunc()"
+            />
+          </div>
         </div>
         <div class="result">
           <span>Number of People</span>
           <span id="span">Can't be Zero</span>
           <div class="numberbox">
             <span><i class="fa-solid fa-user"></i></span>
-            <input type="number" class="btn" name="" id="" min="0" />
+            <input
+              type="number"
+              class="info-box"
+              name=""
+              id="number-people"
+              min="1"
+              oninput="customFunc()"
+            />
           </div>
         </div>
       </div>
-      <div class="board common">
+      <div class="box2 common">
         <div class="prices">
-          <span>Tip Amount / person</span>
-          <div class="price"></div>
+          <span
+            >Tip Amount<br />
+            <span class="span-person">/person</span></span
+          >
+          <div id="tip-amount" class="price"></div>
         </div>
         <div class="prices">
-          <span>Total/ person</span>
-          <div class="price"></div>
+          <span
+            >Total<br />
+            <span class="span-person">/person</span></span
+          >
+          <div id="total" class="price"></div>
         </div>
-        <input type="button" value="RESET" />
+        <input id="reset-btn" type="button" value="RESET" />
       </div>
     </div>
     <script src="script.js"></script>
