@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Merriweather&family=Montserrat&family=Open+Sans:wght@300;400&family=Poppins:wght@500&family=Sacramento&family=Varela+Round&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper {
+  height: 600px;
+  width: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#text {
+  resize: none;
+  border-radius: 10px;
+  outline: none;
+  padding-left: 10px;
+  padding-top: 15px;
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+  width: 700px;
+  height: 250px;
+  border: 1.5px solid #2f58cd;
+}
+
+#btn {
+  padding: 15px 40px;
+  border-radius: 10px;
+  border: none;
+  background-color: #2b3467;
+  color: #f0f0f0;
+  font-size: 15px;
+}
+
+#btn:hover {
+  background-color: #222c69;
+  color: #ffff;
+  cursor: pointer;
+}
+
+#btn:active {
+  transform: scale(0.98);
+}
+
+.box {
+  font-size: 32px;
+  word-spacing: 5px;
+  font-weight: bold;
+}
