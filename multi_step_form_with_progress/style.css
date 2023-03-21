@@ -1,0 +1,165 @@
+:root {
+  --primary-color: rgb(11, 78, 179);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, #74ebd5, #acb6e5);
+}
+
+/*General Settings*/
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+}
+
+.text-center {
+  text-align: center;
+  color: #2c3e50;
+}
+
+.with-50 {
+  width: 50%;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+/*Progress*/
+.progressbar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0 4rem 0;
+  counter-reset: step;
+}
+
+.progressbar::before,
+.progress {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 100%;
+  background-color: #dcdcdc;
+}
+
+.progress {
+  background-color: var(--primary-color);
+  width: 0%;
+  transition: 0.3s ease-in-out;
+}
+
+.progress-step {
+  width: 35px;
+  height: 35px;
+  background-color: #dcdcdc;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.progress-step::before {
+  counter-increment: step;
+  content: counter(step);
+}
+
+.progress-step::after {
+  content: attr(data-title);
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  font-size: 0.8rem;
+  color: #666666;
+}
+
+.progress-step.active {
+  background-color: var(--primary-color);
+  color: #f3f3f3;
+}
+
+/*form*/
+.form {
+  width: clamp(320px, 30%, 430px);
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 0.35rem;
+  padding: 1.5rem;
+  background-color: #ecf0f1;
+  box-shadow: 2px 4px 11px -1px #000000;
+}
+
+.form-step {
+  display: none;
+  transform-origin: top;
+  animation: animate 0.5s;
+}
+
+@keyframes animate {
+  from {
+    transform: scale(1, 0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+
+.form-step.active {
+  display: block;
+}
+
+.input-group {
+  margin: 2rem 0;
+}
+
+/*Buttons*/
+.btns-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+.btn {
+  padding: 0.75rem;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--primary-color);
+  color: #f3f3f3;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn:hover {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--primary-color);
+}
