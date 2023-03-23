@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Merriweather&family=Montserrat&family=Open+Sans:wght@300;400&family=Poppins:wght@500&family=Sacramento&family=Varela+Round&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: #f0f0f0;
+}
+
+.wrapper {
+  min-width: 400px;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 1.5px;
+  margin-top: 200px;
+}
+.text-box {
+  height: 4rem;
+  background-color: white;
+  margin-bottom: 30px;
+  border-radius: 15px;
+  box-shadow: 3px 7px 12px 6px #e2e2e2;
+  position: relative;
+}
+
+input[type='text'] {
+  width: 90%;
+  height: inherit;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  padding-left: 15px;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.item-box {
+  min-width: inherit;
+  height: 300px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 3px 7px 12px 6px #e2e2e2;
+  display: none;
+  position: absolute;
+}
+
+.items {
+  width: inherit;
+  height: 60px;
+  display: flex;
+  padding: 20px;
+}
+
+.items > span {
+  margin-left: 15px;
+}
+
+.items p {
+  margin-left: 11px;
+}
+
+.items:hover {
+  cursor: pointer;
+  background-color: #145da0;
+  color: #f0f0f0;
+}
+
+.items:first-child:hover {
+  border-radius: 10px 10px 0 0;
+}
+
+.items:last-child:hover {
+  border-radius: 0 0 10px 10px;
+}
+
+.text-box i:hover {
+  cursor: pointer;
+}
+
+#up {
+  display: none;
+  position: absolute;
+  top: 23px;
+  right: 15px;
+}
+
+#down {
+  position: absolute;
+  top: 23px;
+  right: 15px;
+}
