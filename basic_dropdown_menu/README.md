@@ -1,1 +1,1 @@
-You can view the project here [Click Me](https://smydropdownmenu.netlify.app)
+You can view the project here [Click Me](https://smybasicdropdownmenu.netlify.app)
