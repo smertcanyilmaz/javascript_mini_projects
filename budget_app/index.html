@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/87840e66db.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Budget App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="enteries">
+        <h1>BUDGET APP</h1>
+        <span id="error" class="error">Value Cannot Be Emtpy Or Negative!</span>
+
+        <div class="budget">
+          <span>Please Enter Your Budget</span>
+          <input type="number" name="number-bud" id="number-bud" />
+          <input type="button" value="Calculate" id="calc-btn" class="btn" />
+        </div>
+        <div class="expense">
+          <span>Please Enter Your Expense</span>
+          <input type="text" name="text" id="text" />
+          <span>Please Enter Expense Amount</span>
+          <input type="number" name="number-exp" id="number-exp" />
+          <input
+            type="button"
+            value="Add Expense"
+            id="expense-btn"
+            class="btn"
+          />
+        </div>
+      </div>
+      <div class="results">
+        <div class="inner-results">
+          <div class="result">
+            <h3>BUDGET</h3>
+            <i class="fa-solid fa-2x fa-money-bill-1"></i>
+            <span id="s-budget">0</span>
+          </div>
+          <div class="result">
+            <h3>EXPENSES</h3>
+            <i class="fa-sharp fa-2x fa-regular fa-credit-card"></i>
+            <span id="s-expenses">0</span>
+          </div>
+          <div class="result">
+            <h3>BALANCE</h3>
+            <i class="fa-solid fa-2x fa-dollar-sign"></i>
+            <span id="s-balance">0</span>
+          </div>
+        </div>
+        <div class="list">
+          <div class="list-h">
+            <h4>Expense Title</h4>
+            <h4>Expense Value</h4>
+          </div>
+          <div class="list-span">
+            <span id="item">FİX A CAR</span>
+            <span id="item-value">1000</span>
+            <div class="fix">
+              <i
+                id="fix"
+                class="fa-solid fa-pen-to-square"
+                style="color: #3b6896"
+              ></i>
+              <i id="trash" class="fa-solid fa-trash" style="color: red"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
