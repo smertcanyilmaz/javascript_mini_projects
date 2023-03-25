@@ -20,7 +20,18 @@
         <div class="budget">
           <span>Please Enter Your Budget</span>
           <input type="number" name="number-bud" id="number-bud" />
-          <input type="button" value="Calculate" id="calc-btn" class="btn" />
+          <input
+            type="button"
+            value="Add Budget"
+            id="budget-btn"
+            class="btn btnUp"
+          />
+          <input
+            type="button"
+            value="Calculate"
+            id="calc-btn"
+            class="btn btnUp"
+          />
         </div>
         <div class="expense">
           <span>Please Enter Your Expense</span>
@@ -33,6 +44,7 @@
             id="expense-btn"
             class="btn"
           />
+          <input type="button" value="deneme" id="deneme-btn" />
         </div>
       </div>
       <div class="results">
@@ -58,9 +70,9 @@
             <h4>Expense Title</h4>
             <h4>Expense Value</h4>
           </div>
-          <div class="list-span">
-            <span id="item">FİX A CAR</span>
-            <span id="item-value">1000</span>
+          <!-- <div class="list-span">
+            <span id="item"></span>
+            <span id="item-value"></span>
             <div class="fix">
               <i
                 id="fix"
@@ -69,10 +81,21 @@
               ></i>
               <i id="trash" class="fa-solid fa-trash" style="color: red"></i>
             </div>
-          </div>
+          </div> -->
+          <table>
+            <tr>
+              <td>Expanse Title</td>
+              <td>Expanse Value</td>
+            </tr>
+            <tr>
+              <td>Satır 1</td>
+              <td>Satır 1</td>
+            </tr>
+          </table>
         </div>
       </div>
     </div>
+    <ul id="expense-list"></ul>
     <script src="script.js"></script>
   </body>
 </html>
