@@ -71,7 +71,12 @@ input[type='text'].active {
   border: 2px solid red;
 }
 
-#calc-btn {
+#number-bud.active2,
+#number-exp.active2 {
+  border: 2px solid red;
+}
+
+.btnUp {
   padding: 10px;
   width: 6rem;
   border-radius: 5px;
@@ -102,15 +107,15 @@ input[type='text'].active {
 }
 
 .inner-results {
-  height: 13rem;
+  height: 8rem;
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 5rem;
+  justify-content: space-around;
+  margin-bottom: 1rem;
 }
 
 .result {
   height: inherit;
-  font-size: 25px;
+  font-size: 15px;
   text-align: center;
   color: #3b6896;
   display: flex;
@@ -119,7 +124,7 @@ input[type='text'].active {
 }
 
 .result > span {
-  font-size: 25px;
+  font-size: 15px;
   font-weight: 600;
 }
 
@@ -151,4 +156,61 @@ input[type='text'].active {
   font-weight: 600px;
   letter-spacing: 1px;
   visibility: hidden;
+}
+
+hr {
+  margin-bottom: 1rem;
+}
+
+table {
+  width: 90%;
+  display: flex;
+}
+
+.table-title {
+  font-weight: 600;
+}
+
+.table-title2 {
+  height: 10px;
+}
+
+.fa-trash:hover {
+  cursor: pointer;
+}
+
+.secret {
+  visibility: hidden;
+}
+
+#item-input {
+  background-color: transparent;
+  border: 1px solid #3b6896;
+  border-radius: 2px;
+  width: 170px;
+  color: black;
+}
+
+#item-input.activeItem {
+  border: 1px solid red;
+}
+
+.table-title > td {
+  width: 187px;
+}
+
+.fa-pen-to-square:hover {
+  cursor: pointer;
+}
+
+.fa-square-check:hover {
+  cursor: pointer;
+}
+
+.t-3 i {
+  width: 100%;
+  height: 100%;
+  display: inline;
+  padding-left: 15px;
+  font-size: 18px;
 }
