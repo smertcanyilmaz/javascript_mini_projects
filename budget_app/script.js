@@ -40,7 +40,7 @@ const addBudgetBtn = document.getElementById('budget-btn');
 // gerçekte çıkan sonuç = let exp = [25, 600] let numbers = [20, 20]; let result = [5, 5, 580]; (neden resultta 3 tane eleman var hiçbir fikrim yok)
 // kısacası benim listelenen inptularımının ilki dışında expense value altında listelenen diğer inputları tanımlanmıyor. ben bu sorunu nasıl çözebilirim ve değerleri olması gertiği gibi nasıl yazabilirim? benim aklıma ilk gelen array ile yapmaktı reduce gibi methodları da denedim ama çalıştıramadım.
 
-//NOT: Please Enter Expense Amount'da girilen değerin exp arrayine pushlandığı satır:  112. satır exp.push(expenses);
+//NOT: Please Enter Expense Amount'da girilen değerin exp arrayine pushlandığı satır:  110. satır exp.push(expenses);
 
 let exp = [];
 let numbers = [];
