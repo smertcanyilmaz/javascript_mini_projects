@@ -2,7 +2,6 @@
 
 const error = document.getElementById('error');
 const numberBud = document.getElementById('number-bud');
-const calcBtn = document.getElementById('calc-btn');
 const text = document.getElementById('text');
 const expenseBtn = document.getElementById('expense-btn');
 const sBudget = document.getElementById('s-budget');
@@ -14,7 +13,11 @@ const fix = document.getElementById('fix');
 const trash = document.getElementById('trash');
 const numberExp = document.getElementById('number-exp');
 const addBudgetBtn = document.getElementById('budget-btn');
+const denemeBtn = document.getElementById('deneme-btn');
 
+// let exp = [];
+let numbers = [];
+let result = [];
 let totalExpenses = 0;
 
 function addExpenses() {
@@ -57,7 +60,10 @@ function expenseFunc() {
   td1.innerHTML = `<input type="text" id="item-input" readonly value="${text.value}">`;
   td2.innerHTML = `<input type="number" id="item-input"  readonly value="${expenses}">`;
   td3.innerHTML =
-    "<i class='fa-solid fa-pen-to-square' style='color: #3b6896'> </i><i class='fa-solid fa-square-check'  style='color: #34d714'</i> </i><i class='fa-solid fa-trash' id='trashid' style='color: red'> ";
+    "<i class='fa-solid fa-pen-to-square' style='color: #3b6896'> </i><i class='fa-solid fa-square-check'  style='color: #34d714' onclick='newChecker()'></i> </i><i class='fa-solid fa-trash' id='trashid' style='color: red'> ";
+
+  numbers.push(expenses);
+  // console.log(exp);
 
   const trashIcons = document.getElementsByClassName('fa-trash');
 
@@ -91,18 +97,16 @@ function expenseFunc() {
         );
         nameCell.removeAttribute('readonly');
         expenseCell.removeAttribute('readonly');
-        calcBtn.disabled = true;
+
         //this.classList.remove('fa-pen-to-square');
         //this.classList.add('fa-check');
         nameCell.focus();
 
         nameCell.addEventListener('blur', function () {
           nameCell.setAttribute('readonly', '');
-          calcBtn.disabled = false;
         });
         expenseCell.addEventListener('blur', function () {
           expenseCell.setAttribute('readonly', '');
-          calcBtn.disabled = false;
         });
       });
     }
@@ -123,7 +127,8 @@ function expenseFunc() {
           expenseCell.classList.remove('activeItem');
           //checkIcons.classList.add('fa-pen-to-square');
           error.style.visibility = 'hidden';
-          calcBtn.disable = false;
+
+          //newChecker();
         } else {
           error.style.visibility = 'visible';
           error.innerHTML = 'Please Fill in All Fields Before Saving';
@@ -168,15 +173,7 @@ function expenseFunc() {
     numberExp.classList.add('active2');
   }
 
-  // TO ENABLE calcBtn
-
-  if (
-    sBudget.innerHTML !== '' &&
-    td1.innerHTML !== '' &&
-    td2.innerHTML !== ''
-  ) {
-    calcBtn.disabled = false;
-  }
+  addExpenses();
 
   // if (expenses > budget) {                  //OPTİNAL: if you don't want balance to decrease to minus
   //   error.style.visibility = 'visible';
@@ -184,12 +181,11 @@ function expenseFunc() {
   //   item.innerHTML = '❌';
   //   itemValue.innerHTML = '❌';
   // }
-  addExpenses();
 }
 
 function updateBudget() {
   const budget = parseFloat(numberBud.value);
-  if (isNaN(budget) /*|| td1.innerHTML === '' || td2.innerHTML === '' */) {
+  if (isNaN(budget)) {
     error.style.visibility = 'visible';
     //sBudget.innerHTML = '0';                   // OPTİNAL: reseting values
     //sExpenses.innerHTML = '0';
@@ -208,9 +204,6 @@ function updateBudget() {
   }
 }
 
-calcBtn.addEventListener('click', () => {
-  updateBudget();
-});
 expenseBtn.addEventListener('click', () => {
   expenseFunc();
   updateBudget();
@@ -218,3 +211,44 @@ expenseBtn.addEventListener('click', () => {
 addBudgetBtn.addEventListener('click', () => {
   addBudget();
 });
+
+denemeBtn.addEventListener('click', () => {
+  const expenseCell = document.querySelector('td:nth-child(2) input');
+  const expoVal = parseFloat(expenseCell.value);
+  numbers.push(expoVal);
+});
+
+// function sending() {
+//   const expenses = Number(numberExp.value); //input1
+//   const expenseCell = document.querySelector(
+//     'td:nth-child(2) input' //input2
+//   );
+//   const expoVal = parseFloat(expenseCell.value);
+//   values.push(expenses); // değeri diziye ekliyoruz
+//   expenseCell = expenses; // ikinci inputta gösteriyoruz
+//   numberExp.value = ''; // birinci inputu temizliyoruz
+// }
+
+function newChecker() {
+  //   const expenseCell = document.querySelector(
+  //     'td:nth-child(2) input' //input2
+  //   );
+  //   const expoVal = parseFloat(expenseCell.value);
+  //   numbers.push(expoVal);
+  //   //let result = numbers.reduce((prev, curr) => curr - prev);
+  //   // sExpenses.innerHTML += parseFloat(result);
+  //   // console.log(numbers);
+  //   for (let j = 0; j < exp.length; j++) {
+  //     result.push(exp[j] - numbers[j]);
+  //     exp.shift();
+  //     numbers.shift();
+  //   }
+  //   console.log(exp);
+  //   console.log(numbers);
+  //   console.log(result);
+
+  result.push(numbers.reduce((acc, val) => acc - val));
+
+  numbers.splice(0, numbers.length);
+  console.log(result);
+}
