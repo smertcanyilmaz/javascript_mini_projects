@@ -14,7 +14,6 @@ const trash = document.getElementById('trash');
 const numberExp = document.getElementById('number-exp');
 const addBudgetBtn = document.getElementById('budget-btn');
 
-// (https://smybudget.netlify.app)
 
 // YAŞADIĞIM SORUN newChecker fonsiyonunda. Buradaki temel amacım şuydu;
 
