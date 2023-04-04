@@ -107,7 +107,6 @@ function expenseFunc() {
     "<i class='fa-solid fa-pen-to-square' style='color: #3b6896'> </i><i class='fa-solid fa-square-check'  style='color: #34d714' onclick = 'newChecker()'></i> </i><i class='fa-solid fa-trash' id='trashid' style='color: red'> ";
 
   exp.push(expenses);
-  // console.log(exp);
 
   const trashIcons = document.getElementsByClassName('fa-trash');
 
