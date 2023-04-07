@@ -37,7 +37,7 @@ const addBudgetBtn = document.getElementById('budget-btn');
 // işte bu noktada fonsiyon çalışmıyor. her zaman default olarak ilk inputu kendisine çıkarılacak exp değer olarak kabul ediyor. console'da durum şöyle bekleniyor/gerçekleşiyor:
 // beklenen: let exp = [25, 500] let numbers = [20, 600]; let result = [5, 100];
 // gerçekte çıkan sonuç = let exp = [25, 600] let numbers = [20, 20]; let result = [5, 5, 580]; (neden resultta 3 tane eleman var hiçbir fikrim yok)
-// kısacası benim listelenen inptularımının ilki dışında expense value altında listelenen diğer inputları tanımlanmıyor. ben bu sorunu nasıl çözebilirim ve değerleri olması gertiği gibi nasıl yazabilirim? benim aklıma ilk gelen array ile yapmaktı reduce gibi methodları da denedim ama çalıştıramadım.
+// kısacası benim listelenen inptularımının ilki dışında expense value altında listelenen diğer inputları tanımlanmıyor. ben bu sorunu nasıl çözebilirim ve değerleri olması gertiği gibi nasıl yazabilirim? benim aklıma ilk gelen array ile yapmaktı reduce gibi methodları da denedim ama çalıştıramadım
 
 //NOT: Please Enter Expense Amount'da girilen değerin exp arrayine pushlandığı satır:  110. satır exp.push(expenses);
 
