@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Merriweather&family=Montserrat&family=Open+Sans:wght@300;400&family=Poppins:wght@500&family=Sacramento&family=Varela+Round&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+
+  scroll-behavior: smooth;
+}
+
+.nav {
+  position: fixed;
+  width: 100%;
+}
+
+.navbar {
+  background-color: #0275dd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+}
+
+.box {
+  width: 50%;
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+a {
+  padding: 12px 25px;
+  color: white;
+  background-color: transparent;
+  border: none;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+a.active,
+a:hover {
+  background-color: #a3c1a6;
+}
+
+.mainbox {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+
+.mainbox:nth-child(2) {
+  background-color: #d7f8ff;
+}
+.mainbox:nth-child(3) {
+  background-color: #cec5fa;
+}
+
+.mainbox:nth-child(4) {
+  background-color: #a9fdd8;
+}
+
+.mainbox:nth-child(5) {
+  background-color: #feceea;
+}
+.mainbox:nth-child(6) {
+  background-color: #fef1d2;
+}
+.mainbox:nth-child(7) {
+  background-color: #d7f8ff;
+}
