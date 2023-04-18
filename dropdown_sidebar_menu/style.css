@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Merriweather&family=Montserrat&family=Open+Sans:wght@300;400&family=Poppins:wght@300;400;500;600;700&family=Sacramento&family=Varela+Round&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+}
+
+.card {
+  height: inherit;
+  width: 230px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: beige;
+}
+
+.card .title {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px 0 15px;
+}
+
+.card .title h2 {
+  flex: 1;
+  text-align: center;
+}
+
+.card .title img {
+  height: 30px;
+  width: 30px;
+}
+
+.card .menu {
+  background: red;
+  flex: 1;
+  padding-top: 30px;
+}
+
+.card .profile {
+  background-color: azure;
+  display: flex;
+  padding: 10px;
+}
+
+.card .profile img {
+  height: 45px;
+  width: 45px;
+  object-fit: contain;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+.card .profile p {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.card .profile h5 {
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.card .profile > div:last-child {
+  font-size: 18px;
+  height: 50%;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.card .menu a {
+  color: #000;
+  text-decoration: none;
+  padding: 10px 0 0 15px;
+}
+
+ul {
+  list-style: none;
+}
+
+#up {
+  display: none;
+}
+
+.sub {
+  margin-left: 22px;
+  font-size: 13px;
+}
