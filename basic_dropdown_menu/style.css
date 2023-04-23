@@ -48,7 +48,7 @@ input[type='text'] {
   background-color: white;
   border-radius: 15px;
   box-shadow: 3px 7px 12px 6px #e2e2e2;
-  display: none;
+  
   position: absolute;
 }
 
