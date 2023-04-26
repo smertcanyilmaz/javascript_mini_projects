@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Merriweather&family=Montserrat&family=Open+Sans:wght@300;400&family=Poppins:wght@300;400;500;600;700&family=Sacramento&family=Varela+Round&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+}
+
+.card {
+  height: inherit;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #0c2d48;
+  color: #f0f0f0;
+  position: relative;
+  top: 0;
+  left: 0;
+  transition: width 500ms ease;
+  opacity: 1;
+  overflow: hidden;
+}
+
+.card .title {
+  display: flex;
+  padding: 15px 15px 0 12px;
+}
+
+.t-innerbox {
+  flex: 1;
+  display: flex;
+}
+
+.t-innerbox h2 {
+  margin-left: 11px;
+}
+
+#menu-icon {
+  position: absolute;
+  right: 16px;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+#menu-icon:hover {
+  background-color: #264157;
+  cursor: pointer;
+}
+
+.card .title img {
+  height: 30px;
+  width: 30px;
+  margin-top: 5px;
+}
+
+.card .menu {
+  flex: 1;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 8px;
+}
+
+.card .profile {
+  width: 100%;
+  background-color: #264157;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  position: relative;
+}
+
+.task {
+  color: #000;
+  display: flex;
+}
+.innertask {
+  background-color: #f0f0f0;
+  height: 15vh;
+  width: 100%;
+  border-radius: 10px;
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.fa-plus {
+  background-color: #1e90ff;
+  padding: 7px;
+  border-radius: 100%;
+  font-size: 15px;
+  color: #f0f0f0;
+  text-align: center;
+}
+
+.profile-img {
+  width: 45px;
+  margin-right: 5px;
+}
+
+.online-upper,
+.profile-name-upper {
+  width: calc(100% / 2 - 45px);
+}
+
+.profile-innerimg {
+  height: 45px;
+  width: 45px;
+  background-color: #264157;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border: 1px solid #00ff00;
+}
+
+.card .profile img {
+  height: 45px;
+  width: 45px;
+  object-fit: contain;
+  border-radius: 10px;
+  position: absolute;
+}
+
+.profile-name {
+  width: 100px;
+  position: relative;
+}
+
+.card .profile p {
+  font-size: 12px;
+  font-weight: 500;
+  margin-left: 5px;
+}
+
+.card .profile h5 {
+  font-size: 9px;
+  font-weight: 500;
+  margin-left: 5px;
+}
+
+.card .profile > div:last-child {
+  font-size: 15px;
+  height: 50%;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.card .menu a {
+  text-decoration: none;
+  padding-left: 5px;
+}
+
+ul {
+  list-style: none;
+}
+
+.icon-link {
+  position: relative;
+  padding: 10px;
+}
+
+.icon-link span {
+  font-size: 18px;
+  margin-left: 18px;
+  color: #f0f0f0;
+  position: absolute;
+}
+
+.fa-house,
+.fa-gear,
+.fa-bell,
+.fa-envelope,
+.fa-check-to-slot {
+  font-size: 17px;
+  color: #f0f0f0;
+}
+
+.sub-menu {
+  font-size: 14px;
+  height: 12vh;
+  width: 80%;
+  border-radius: 10px;
+  margin-top: 5px;
+  margin-left: 25px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2px;
+  background-color: #f0f0f0;
+  display: none;
+}
+
+.sub-menu li > a {
+  color: #000;
+  margin-left: -25px;
+}
+
+.icon-link a ~ i {
+  color: #f0f0f0;
+  font-size: 13px;
+  padding-top: 5px;
+}
+
+.fa-chevron-down {
+  position: absolute;
+  right: 27px;
+  transition: all 250ms linear;
+}
+
+.fa-chevron-down:hover {
+  cursor: pointer;
+}
+
+.icon-link:hover {
+  background-color: #264157;
+  cursor: pointer;
+}
+
+.online {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background-color: #00ff00;
+  position: absolute;
+  right: 30px;
+}
+
+.card.active {
+  width: 60px;
+}
+
+.icon-link span.active,
+.t-innerbox.active,
+.profile-name.active,
+.online.active {
+  opacity: 0;
+  transition: opacity 500ms;
+  transition-delay: 100ms;
+}
+.fa-chevron-down.active {
+  opacity: 0;
+}
+
+.card .profile.active {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+}
+
+.card .profile img.active {
+  height: 38px;
+  width: 38px;
+  transition: all 500ms ease;
+  transform: scale(0.9);
+}
+
+.icon-link.active {
+  width: 60px;
+  height: 43px;
+}
+
+.task.active {
+  transition: all 500ms ease;
+}
+
+.innertask.active {
+  background-color: transparent;
+  transition: all 500ms ease;
+  height: 5vh;
+  margin: 5px;
+}
+
+.innertask .newtask.active {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.innertask .newtask.fade-in {
+  animation-name: fadeIn;
+  animation-duration: 1.7s;
+}
+
+.sub-menu li {
+  margin-left: 50px;
+  padding: 2px;
+}
+
+.sub-menu.active {
+  display: none;
+}
+
+.fa-chevron-down.rotate {
+  transform: rotate(-180deg);
+}
