@@ -15,7 +15,6 @@ const profile = document.querySelector('.card .profile');
 const task = document.querySelector('.task');
 const innertask = document.querySelector('.innertask');
 const newtask = document.querySelector('.innertask .newtask');
-
 const rotate = document.querySelector('.rotate');
 
 menuIcon.addEventListener('click', () => {
@@ -68,11 +67,11 @@ down.forEach((downn, index) => {
   });
 });
 
-// beginner-friendly version
+// alternative 1 beginner-friendly version
 
 // down.forEach(function (downn, index) {
 //   downn.addEventListener('click', function () {
-//     var submenu = subMenu[index];
+//     const submenu = subMenu[index];
 //     if (submenu.style.display === 'flex') {
 //       submenu.style.display = 'none';
 //       downn.classList.remove('rotate');
@@ -83,7 +82,7 @@ down.forEach((downn, index) => {
 //   });
 // });
 
-// alternative 2 which have up and down icon but no arrow rotation
+// alternative 2 which have up and down icons but no arrow rotation
 
 // for (let i = 0; i < down.length; i++) {
 //   down[i].addEventListener('click', e => {
@@ -110,3 +109,99 @@ down.forEach((downn, index) => {
 //     });
 //   });
 // }
+
+// popup section
+
+const plus = document.querySelector('.task .fa-plus');
+const popup = document.querySelector('.popup');
+const overlay = document.querySelector('.overlay');
+const xmark = document.querySelector('.fa-xmark');
+
+plus.addEventListener('click', () => {
+  popup.style.display = 'flex';
+  overlay.style.display = 'block';
+});
+
+xmark.addEventListener('click', () => {
+  popup.style.display = 'none';
+  overlay.style.display = 'none';
+});
+
+overlay.addEventListener('click', () => {
+  popup.style.display = 'none';
+  overlay.style.display = 'none';
+});
+
+// adding tasks
+// const btn = document.getElementById('btn');
+// const taskForm = document.getElementById('task-form');
+// const textInput = taskForm['text'];
+// const dateInput = taskForm['date'];
+
+// const tasks = [];
+
+// const addTask = (text, date) => {
+//   tasks.push({ text, date });
+
+//   return { text, date };
+// };
+
+// const createTaskElement = ({ text, date }) => {
+//   const ul = document.querySelector('.create');
+//   const li = document.createElement('li');
+//   const a = document.createElement('a');
+//   a.href = '#';
+//   a.textContent = text + date;
+//   li.appendChild(a);
+//   ul.appendChild(li);
+// };
+
+// btn.addEventListener('click', () => {
+//   const newTask = addTask(textInput.value, dateInput.value);
+//   createTaskElement(newTask);
+// });
+
+const btn = document.getElementById('btn');
+const taskForm = document.getElementById('task-form');
+const textInput = taskForm['text'];
+const dateInput = taskForm['date'];
+
+const tasks = [];
+
+const addTask = (text, date) => {
+  const newTask = { text, date };
+  tasks.push(newTask);
+  return newTask;
+};
+
+const createTaskElement = ({ text, date }) => {
+  //const parentli = document.getElementById('parentli');
+  const ul = document.createElement('ul');
+  const li = document.createElement('li');
+  const a = document.createElement('a');
+
+  //ul.classList.add('sub-menu');
+  // parentli.add.classList('create');
+  // li.classList.add('lii');
+
+  const formattedDate = new Date(date).toLocaleDateString('tr-TR', {
+    day: 'numeric',
+    month: 'numeric',
+    year: 'numeric',
+  });
+
+  a.href = '#';
+  a.textContent = text + ' - ' + formattedDate;
+  li.appendChild(a);
+  ul.appendChild(li);
+  //parentli.appendChild(ul);
+};
+
+btn.addEventListener('click', event => {
+  event.preventDefault();
+  const newTask = addTask(textInput.value, dateInput.value);
+  createTaskElement(newTask);
+
+  textInput.value = '';
+  dateInput.value = '';
+});
