@@ -316,3 +316,104 @@ ul {
 .fa-chevron-down.rotate {
   transform: rotate(-180deg);
 }
+
+/* popup section */
+
+.popup {
+  width: 700px;
+  height: 53vh;
+  background-color: #f0f0f0;
+  display: flex;
+  border-radius: 10px;
+  position: absolute;
+  top: 20vh;
+  left: 345px;
+  z-index: 20;
+  display: none;
+}
+
+.popup .task-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+.popup .taskbox {
+  display: flex;
+  flex-direction: column;
+}
+.popup .task-wrapper .taskbox > input {
+  width: 300px;
+  height: 40px;
+  outline: none;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  padding-left: 5px;
+}
+
+.popup .task-wrapper .taskbox .btnbox {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.popup .task-wrapper .taskbox .btnbox button {
+  width: 100px;
+  height: 30px;
+}
+
+.popup .task-img {
+  width: 50%;
+  height: 100%;
+}
+
+.popup .task-img img {
+  object-fit: cover;
+  width: 100%;
+  height: inherit;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.popup .task-img .xmark {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+.popup .task-img .xmark > i {
+  font-size: 22px;
+}
+
+.popup .task-img .xmark > i:hover {
+  cursor: pointer;
+  color: #444444;
+}
+
+/* task js classes */
+
+.overlay {
+  display: none;
+  content: '';
+  opacity: 0.8;
+  background: #444444;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 10;
+  backdrop-filter: blur(1px);
+}
+
+.task .fa-plus:hover {
+  cursor: pointer;
+}
+
+/* adding tasks */
+
+.lii {
+  height: 500px;
+  width: 500px;
+  background-color: red;
+  position: absolute;
+}
