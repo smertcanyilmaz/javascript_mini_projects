@@ -333,10 +333,6 @@ ul {
   animation-duration: 1.7s;
 }
 
-/* .sub-menu li {
-  margin-left: 50px;
-  padding: 2px;
-} */
 
 .sub-menu.active {
   display: none;
@@ -489,11 +485,7 @@ ul {
   transform: rotate(65deg);
 }
 
-/* .online-box .options {
-  width: 100%;
-  border-radius: 10px;
-  display: flex;
-} */
+
 
 .online-box .status-box {
   height: 10vh;
@@ -544,7 +536,7 @@ ul {
 @media (max-width: 800px) {
   .card {
     height: 100%;
-    width: 250px; /* veya daha küçük bir değer */
+    width: 250px; 
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -555,7 +547,7 @@ ul {
 
     transition: left 500ms ease;
     opacity: 1;
-    overflow-y: auto; /* yalnızca dikey kaydırmaya izin vermek için */
+    overflow-y: auto; 
   }
 
   .popup .task-img {
