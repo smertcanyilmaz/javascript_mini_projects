@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/87840e66db.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Dropdown Sidebar Menu</title>
+  </head>
+  <body>
+   <div class="overlay"></div>
+    <div class="card">
+      <div class="title">
+        <div class="t-innerbox">
+          <img src="letter-c.png" alt="" />
+          <h2>CoderDesk</h2>
+        </div>
+        <i id="menu-icon" class="fa-solid fa-bars"></i>
+      </div>
+      <ul class="menu">
+        <li>
+          <div class="icon-link">
+            <a href="#">
+              <i class="fa-solid fa-folder"></i>
+              <span class="link_name">Dashboard</span>
+            </a> 
+        </li>
+
+        <li>
+          <div class="icon-link">
+            <a href="#">
+              <i class="fa-solid fa-bell"></i>
+              <span class="link_name">Notifications</span>
+            </a>
+          </div>
+        </li>
+        <li>
+          <div class="icon-link">
+            <a href="#">
+              <i class="fa-solid fa-envelope"></i>
+              <span class="link_name">Messages</span>
+            </a>
+          </div>
+        </li>
+        <li>
+          <div class="icon-link">
+            <a href="#">
+              <i class="fa-sharp fa-solid fa-check-to-slot"></i>
+              <span class="link_name">Tasks</span>
+            </a>
+            <i class="fa-solid fa-chevron-down"></i>
+            
+          </div>
+          <ul id="parentul" class="sub-menu">
+
+          </ul>
+        </li>
+        <li>
+          <div class="icon-link">
+            <a href="#">
+              <i class="fa-solid fa-gear"></i>
+              <span class="link_name">Settings</span>
+            </a>
+            <i class="fa-solid fa-chevron-down"></i>
+           
+          </div>
+          <ul class="sub-menu">
+            <div class="divs2"><li><a href="#">Privacy</a></li></div>
+            <div class="divs2"><li><a href="#">Help Center</a></li></div>
+            <div class="divs2"><li><a href="#">Shortcuts</a></li></div>
+          </ul>
+        </li>
+      </ul>
+
+      <div class="task">
+        <div class="innertask">
+          <i class="fa-solid fa-plus"></i>
+          <p class="newtask">Create new task</p>
+        </div>
+      </div>
+
+      <div class="profile">
+        <div class="profile-img">
+          <div class="profile-innerimg">
+            <img src="myprofile.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="profile-name-upper">
+          <div class="profile-name">
+            <p>Mertcan Yılmaz</p>
+            <h5>Frontend Developer</h5>
+          </div>
+        </div>
+
+        <div class="online-upper"><div class="online"></div></div>
+      </div>
+    </div>
+
+      <div class="popup">
+        <div class="task-wrapper">
+          <form id="task-form" class="taskbox" action="">
+            <label class="label" for="">Enter Task</label>
+            <input type="text" name="text" id="text">
+            <label class="label" for="">Enter Deadline</label>
+            <input type="date" name="date" id="date" min="2023-04-29">
+            <div class="btnbox"><button id="btn" >Add Task</button></div> 
+            <span id="span">Please fill in task and deadline</span>
+          </form>
+        </div>
+      
+        <div class="task-img">
+          <img src="task_img.jpg" alt="">
+          <div class="xmark"><i class="fa-solid fa-xmark"></i></div>
+        </div>
+      </div>
+
+      <div class="online-box">
+          <div class="status-box">
+            <div class="status-innerbox">
+              <div  class="status"></div>
+            <span>online</span></div>
+      
+            <div class="status-innerbox">
+              <div  class="status"></div>
+            <span>busy</span></div>
+
+            <div class="status-innerbox">
+              <div  class="status"></div>
+            <span>idle</span></div>
+          </div>
+      </div>
+     
+    <script src="script.js"></script>
+  </body>
+</html>
