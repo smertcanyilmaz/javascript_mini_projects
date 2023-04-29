@@ -434,6 +434,10 @@ ul {
   color: red;
 }
 
+#a {
+  color: #000;
+}
+
 .border {
   border: 2px solid red;
 }
