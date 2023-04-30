@@ -32,7 +32,7 @@ const addBudgetBtn = document.getElementById('budget-btn');
 
 //  bu sefer işlemi farklı harcamalarla devam ettiriyoruz örneğin;
 // // Please Enter Your Expense : halı
-// Please Enter Expense Amount : 500 add expense diyip listeliyoruz, edit yapıp yeni değer giriyoruz örneğin: 600 ve check ikonuna tıklıyoruz.
+// Please Enter Expense Amount : 500 add expense diyip listeliyoruz, edit yapıp yeni değer giriyoruz örneğin: 600 ve check ikonuna tıklıyoruz
 
 // işte bu noktada fonsiyon çalışmıyor. her zaman default olarak ilk inputu kendisine çıkarılacak exp değer olarak kabul ediyor. console'da durum şöyle bekleniyor/gerçekleşiyor:
 // beklenen: let exp = [25, 500] let numbers = [20, 600]; let result = [5, 100];
