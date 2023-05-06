@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Merriweather&family=Montserrat&family=Open+Sans:wght@300;400&family=Poppins:wght@300;400;500;600;700&family=Sacramento&family=Varela+Round&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: cornflowerblue;
+  color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 90%;
+  max-width: 25rem;
+  min-height: 40vh;
+  background-color: rgb(30, 38, 143);
+  padding: 2rem;
+  box-shadow: 0px 5px 12px 0px rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+
+.btn-div {
+  height: 50px;
+  text-align: center;
+}
+
+.btn {
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+}
+
+.btn:hover {
+  cursor: pointer;
+  filter: brightness(0.9);
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.text-wrapper {
+  flex: 1;
+  text-align: center;
+}
+
+.text {
+  line-height: 30px;
+}
+
+.hero {
+  margin-top: 30px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    width: 90%;
+    max-width: 400px;
+  }
+}
