@@ -26,7 +26,7 @@ btn.addEventListener("click", updateQuote);
 
 updateQuote();
 
-// alternative 1
+// alternative 2
 
 // const getNewQuote = function () {
 //   return fetch("https://api.quotable.io/random?maxLength=150")
@@ -45,7 +45,7 @@ updateQuote();
 
 // updateQuote();
 
-// alternative 2
+// alternative 3
 
 // const getQuotes = () => {
 //   const request = new XMLHttpRequest();
