@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Merriweather&family=Montserrat&family=Open+Sans:wght@300;400&family=Poppins:wght@300;400;500;600;700&family=Sacramento&family=Varela+Round&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #0078ff;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 90%;
+  max-width: 500px;
+  /* min-height: 70vh; */
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.firstbox {
+  width: 100%;
+  height: calc(70vh / 4);
+  /* background-color: antiquewhite; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.firstbox .title {
+  font-weight: 600;
+}
+
+.firstbox .search {
+  margin-top: 40px;
+  width: 100%;
+}
+
+.firstbox .search .inner-search {
+  display: flex;
+}
+
+.firstbox .search .inner-search .searchbox {
+  /* background-color: #fff; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  padding: 5px 10px 5px 5px;
+  border: 2px solid #878787;
+  border-right: none;
+  border-radius: 10px 0 0 10px;
+  margin-bottom: 15px;
+}
+
+.firstbox .search .inner-search .btn {
+  border: 2px solid #ba0f30;
+  border-left: none;
+  border-radius: 0 10px 10px 0;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  background-color: #ba0f30;
+  filter: brightness(1.1);
+  color: #fff;
+  transition: all 500ms;
+}
+
+.firstbox .search .inner-search .btn:hover {
+  cursor: pointer;
+  filter: brightness(1);
+  color: #fff;
+}
+
+.firstbox .search .searchbox input {
+  flex: 1;
+  width: 100%;
+  height: 40px;
+  border: none;
+  outline: none;
+  padding-left: 10px;
+  font-size: 18px;
+  background-color: transparent;
+}
+.firstbox .search .searchbox input:-webkit-autofill,
+.firstbox .search .searchbox input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+.firstbox .span1 {
+  font-size: 13px;
+  color: #878787;
+  display: none;
+}
+
+.secondbox {
+  width: 100%;
+  flex: 1;
+  /* background-color: antiquewhite; */
+  /* display: none; */
+  display: flex;
+  flex-direction: column;
+}
+
+.secondbox .word {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 20px;
+  margin-bottom: 20px;
+  line-height: 30px;
+}
+
+.secondbox .word .span2 {
+  font-size: 13px;
+  color: #878787;
+}
+
+.secondbox .results {
+  flex: 1;
+  /* background-color: #3f3f3f; */
+  display: flex;
+  flex-direction: column;
+}
+
+.secondbox .results .common {
+  border: 1px solid #c0c0c0;
+  border-left: none;
+  border-right: none;
+  height: 97.3px;
+  line-height: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.secondbox .results .common:nth-last-child(2) {
+  border: none;
+}
+
+.secondbox .results .common .box {
+  border-left: 3px solid #0078ff;
+  border-radius: 4px 0 0 4px;
+  padding-left: 10px;
+}
+
+.secondbox .results .common .box > p {
+  color: #878787;
+  font-size: 14px;
+  margin-top: 5px;
+}
