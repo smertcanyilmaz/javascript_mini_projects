@@ -107,12 +107,20 @@ body {
   display: none;
 }
 
+.firstbox .fa-xmark {
+  display: none;
+}
+
+.firstbox .fa-xmark:hover {
+  cursor: pointer;
+}
+
 .secondbox {
   width: 100%;
   flex: 1;
   /* background-color: antiquewhite; */
-  /* display: none; */
-  display: flex;
+  display: none;
+  /* display: flex; */
   flex-direction: column;
 }
 
@@ -128,6 +136,7 @@ body {
 .secondbox .word .span2 {
   font-size: 13px;
   color: #878787;
+  display: flex;
 }
 
 .secondbox .results {
@@ -162,4 +171,12 @@ body {
   color: #878787;
   font-size: 14px;
   margin-top: 5px;
+}
+
+.secondbox .fa-volume-high.active {
+  color: #878787;
+}
+
+.secondbox .fa-volume-high:hover {
+  cursor: pointer;
 }
