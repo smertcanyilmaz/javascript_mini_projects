@@ -11,10 +11,16 @@ const phon = document.querySelector('.phon');
 const volume = document.querySelector('.secondbox .fa-volume-high');
 const xmark = document.querySelector('.firstbox .fa-xmark');
 const text = document.getElementById('text');
+const loaderBox = document.querySelector('.loader-box');
+const errorMes = document.querySelector('.errormes');
+const loader = document.querySelector('.loader');
+const span1 = document.querySelector('.span1');
 
 let data;
 
 async function getData(word) {
+  conditions();
+
   try {
     const response = await fetch(
       `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`
@@ -22,6 +28,8 @@ async function getData(word) {
     const jsonData = await response.json();
     console.log(jsonData);
     console.log(word);
+    loaderBox.classList.remove('activespan');
+    secondBox.style.display = 'flex';
     return jsonData;
   } catch (error) {
     console.error(error);
@@ -48,7 +56,6 @@ async function newData() {
 }
 
 btn.addEventListener('click', () => {
-  secondBox.style.display = 'flex';
   newData();
 });
 
@@ -77,6 +84,7 @@ text.addEventListener('keyup', e => {
   if (e.key === 'Enter' && e.target.value) {
     getData(e.target.value);
     newData();
+    secondBox.style.display = 'inline-block';
   }
 });
 
@@ -89,3 +97,19 @@ xmark.addEventListener('click', () => {
   xmark.style.display = 'none';
   secondBox.style.display = 'none';
 });
+
+function conditions() {
+  if (text.value !== '') {
+    loaderBox.classList.add('activespan');
+    errorMes.style.display = 'none';
+  } else {
+    loaderBox.classList.remove('activespan');
+    errorMes.innerText = 'please write a word . . ';
+  }
+
+  if (text.value !== '' && secondBox.style.display === 'flex') {
+    loader.classList.add('active');
+    span1.classList.add('active');
+    xmark.style.display = 'none';
+  }
+}
