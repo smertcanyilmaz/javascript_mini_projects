@@ -1,4 +1,4 @@
-'use strict';
+ü'use strict';
 
 const btn = document.querySelector('.btn');
 const secondBox = document.querySelector('.secondbox');
@@ -26,10 +26,31 @@ async function getData(word) {
       `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`
     );
     const jsonData = await response.json();
+
+    if (jsonData.title === 'No Definitions Found') {
+      errorMes.innerText = `${word} is not found`;
+      errorMes.style.display = 'block';
+      loaderBox.classList.remove('activespan');
+      //secondBox.style.display = 'none';
+      if (secondBox.style.display === 'flex') {
+        secondBox.style.display = 'none';
+      }
+
+      xmark.style.display = 'none';
+
+      if (text.value !== '' && errorMes.style.display === 'block') {
+        xmark.style.display = 'inline-block';
+      }
+
+      return null;
+    }
+
     console.log(jsonData);
     console.log(word);
     loaderBox.classList.remove('activespan');
     secondBox.style.display = 'flex';
+    xmark.style.display = 'inline-block';
+
     return jsonData;
   } catch (error) {
     console.error(error);
@@ -96,20 +117,87 @@ xmark.addEventListener('click', () => {
   text.value = '';
   xmark.style.display = 'none';
   secondBox.style.display = 'none';
+  errorMes.style.display = 'none';
 });
 
+// function conditions() {
+//   if (text.value !== '') {
+//     loaderBox.classList.add('activespan');
+//     errorMes.style.display = 'none';
+//   } else {
+//     loaderBox.classList.remove('activespan');
+//     errorMes.innerText = 'please write a word . . ';
+//   }
+
+//   if (text.value !== '' && secondBox.style.display === 'flex') {
+//     loader.classList.add('active');
+//     span1.classList.add('active');
+//     xmark.style.display = 'none';
+//   }
+// }
+
 function conditions() {
+  let isValid = false;
+
   if (text.value !== '') {
     loaderBox.classList.add('activespan');
     errorMes.style.display = 'none';
+    isValid = true;
   } else {
     loaderBox.classList.remove('activespan');
-    errorMes.innerText = 'please write a word . . ';
+    errorMes.innerText = 'Please write a word...';
+    errorMes.style.display = 'block';
   }
 
   if (text.value !== '' && secondBox.style.display === 'flex') {
     loader.classList.add('active');
     span1.classList.add('active');
     xmark.style.display = 'none';
+    isValid = true;
+  } else {
+    loader.classList.remove('active');
+    span1.classList.remove('active');
+    xmark.style.display = 'none';
   }
+
+  // if (text.value === '' && secondBox.style.display === 'flex') {
+  //   btn.style.pointerEvents = 'none';
+  //   btn.style.opacity = '0.5';
+  //   isValid = true;
+  // } else {
+  //   btn.style.pointerEvents = 'auto';
+  //   btn.style.opacity = '1';
+  // }
+
+  return isValid;
 }
+
+const geliyorum = document.querySelector('geliyorum');
+const container = document.querySelector('.container');
+const evet = document.querySelector('.evet');
+let audio = new Audio('geliyorum.mp3');
+function playGeliyorum() {
+  audio.currentTime = 0;
+  return audio.play();
+}
+
+function stopGeliyorum() {
+  return audio.pause();
+}
+
+const but = document.querySelector('.but');
+
+but.addEventListener('click', () => {
+  evet.classList.add('active');
+  playGeliyorum();
+  but.classList.add('active');
+  // if (!evet.classList.contains('active')) {
+  //   stopGeliyorum();
+  // }
+});
+
+audio.addEventListener('ended', () => {
+  stopGeliyorum();
+  but.classList.remove('active');
+  evet.classList.remove('active');
+});
