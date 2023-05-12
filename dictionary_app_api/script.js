@@ -122,7 +122,7 @@ xmark.addEventListener('click', () => {
 
 // function conditions() {
 //   if (text.value !== '') {
-//     loaderBox.classList.add('activespan');
+//     loaderBox.classList.add('activespan')
 //     errorMes.style.display = 'none';
 //   } else {
 //     loaderBox.classList.remove('activespan');
