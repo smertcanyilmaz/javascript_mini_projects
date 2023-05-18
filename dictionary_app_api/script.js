@@ -73,7 +73,7 @@ async function newData() {
       break;
     }
   }
-  example.textContent = exampleText;
+  example.textContent = exampleText
 }
 
 btn.addEventListener('click', () => {
