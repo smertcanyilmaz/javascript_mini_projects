@@ -157,7 +157,7 @@ function conditions() {
   } else {
     loader.classList.remove('active');
     span1.classList.remove('active');
-    xmark.style.display = 'none';
+    xmark.style.display = 'none'
   }
 
   // if (text.value === '' && secondBox.style.display === 'flex') {
