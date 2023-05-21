@@ -81,7 +81,7 @@ btn.addEventListener('click', () => {
 });
 
 volume.addEventListener('click', () => {
-  volume.classList.add('active');
+  volume.classList.add('active')
 
   if (!data) return;
 
