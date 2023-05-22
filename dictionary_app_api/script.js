@@ -141,7 +141,7 @@ function conditions() {
 
   if (text.value !== '') {
     loaderBox.classList.add('activespan');
-    errorMes.style.display = 'none';
+    errorMes.style.display = 'none'
     isValid = true;
   } else {
     loaderBox.classList.remove('activespan');
