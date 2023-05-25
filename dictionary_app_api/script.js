@@ -192,7 +192,7 @@ function conditions() {
 //   btn.style.opacity = '0.5';
 //   isValid = true;
 // } else {
-//   btn.style.pointerEvents = 'auto';
+//   btn.style.pointerEvents = 'auto'
 //   btn.style.opacity = '1';
 // }
 
